@@ -24,7 +24,7 @@ skip_img = np.zeros(shape=(img_width, img_height, 3))
 
 f_out = './data/conv_feats.csv'
 files = glob.glob('./data/google_images_sample/*/*/*')
-knn_file = bootstrap(f_out)
+knn_file = './data/knn.pkl'
 
 
 def process_img(f):
@@ -116,15 +116,6 @@ def process_chunk(list_, f_out, model):
     df.to_csv(f_out, index=False, mode=mode, header=header)
 
     
-def bootstrap(file):
-    '''
-    Get filename for knn
-    '''
-    f = file.split('/')[-1]
-    d = '/'.join(file.split('/')[:-1])
-    knn_file = os.path.join(d, 'knn', f.replace('.csv', '.pkl'))
-    
-    return knn_file
 
 def main():
     # transform images to convolutional features.
