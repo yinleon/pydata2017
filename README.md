@@ -9,7 +9,7 @@ I ran the code use Keras with Tensorflow and just one nvidia k80 GPU.
 Here is a [video](https://www.youtube.com/watch?v=-5BAepEE9I8).
 
 ## Copyright
-Copyright (c) Leon Yin 2018
+Copyright (c) 2018 Leon Yin. All Rights Reserved.
 
 ## Research Outputs
 If you use this method in your research please cite this as:
